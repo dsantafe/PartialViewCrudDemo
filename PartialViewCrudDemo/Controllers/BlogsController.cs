@@ -32,6 +32,7 @@ namespace PartialViewCrudDemo.Controllers
         }
 
         // GET: Blogs/Create
+        [HttpGet]
         public ActionResult Create()
         {
             return PartialView(new Blog());
@@ -97,7 +98,7 @@ namespace PartialViewCrudDemo.Controllers
             {
                 return HttpNotFound();
             }
-            return View(blog);
+            return PartialView(blog);
         }
 
         // POST: Blogs/Delete/5

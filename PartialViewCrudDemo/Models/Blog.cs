@@ -11,7 +11,8 @@ namespace PartialViewCrudDemo.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Blog
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,8 +20,10 @@ namespace PartialViewCrudDemo.Models
         {
             this.Post = new HashSet<Post>();
         }
-    
+
         public int Id { get; set; }
+
+        [Required]
         public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
